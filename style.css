@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+span, a, label {
+    display: inline-block;
+}
+body{
+    height: 100dvh;
+ background-image: linear-gradient(aqua,teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 15px solid #098AE8;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.clock::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    inset: 0;
+    margin: auto;
+    border-radius: 50%;
+    z-index: 9;
+}
+.div1{
+    width: 50%;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.279);
+  right: 50%;
+    position: absolute;
+    color: white;
+   transform-origin: right;
+   font-size: 30px;
+   font-weight: 800;
+z-index: -1;
+}
+.d12{
+ transform: rotate(90deg);
+ font-size: 37px;
+ font-weight: bold;
+ 
+}
+.d11{
+    transform: rotate(60deg);  
+}
+.d10{
+    transform: rotate(30deg);  
+}
+.d8{
+    transform: rotate(-30deg);  
+}
+.d7{
+    transform: rotate(-60deg);  
+}
+.d6{
+    transform: rotate(-90deg);  
+    font-size: 37px;
+    font-weight: bold;
+}
+.d5{
+    transform: rotate(-120deg);  
+}
+.d4{
+    transform: rotate(-150deg);  
+}
+.d3{
+    transform: rotate(-180deg);  
+    font-size: 37px;
+    font-weight: bold;
+}
+.d9{
+    font-size: 37px;
+    font-weight: bold;
+}
+.d1{
+    transform: rotate(120deg);  
+}
+.d2{
+    transform: rotate(150deg);  
+}
+.p1{
+    transform: rotate(-120deg); 
+}
+.p2{
+    transform: rotate(-150deg); 
+}
+.p3{
+    transform: rotate(180deg); 
+}
+.p4{
+    transform: rotate(150deg); 
+}
+.p5{
+    transform: rotate(120deg); 
+}
+.p6{
+    transform: rotate(90deg); 
+}
+.p7{
+    transform: rotate(60deg); 
+}
+.p8{
+    transform: rotate(30deg); 
+}
+.p10{
+    transform: rotate(-30deg); 
+}
+.p11{
+    transform: rotate(-60deg); 
+}
+.p12{
+    transform: rotate(-90deg);
+}
+.soat{
+    width: 30%;
+    height: 25px;
+    background-color: rgba(0, 255, 0, 0.901);
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    clip-path: polygon(0% 0%, 80% 0, 100% 50%, 80% 100%, 0% 100%);
+    animation: soat 60s linear infinite;
+    transform-origin: left;
+}
+@keyframes soat{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.minut{
+    width: 40%;
+    height: 22px;
+    background-color: rgba(255, 0, 0, 0.949);
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    clip-path: polygon(0% 0%, 75% 0, 100% 48%, 75% 100%, 0% 100%);
+        animation: soat 30s linear infinite;
+    transform-origin: left;
+}
+@keyframes minut{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.sekund{
+    width: 50%;
+    height: 20px;
+    background-color: rgba(0, 0, 255, 0.816);
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    clip-path: polygon(0% 0%, 75% 0, 100% 48%, 75% 100%, 0% 100%);
+        animation: soat 10s linear infinite;
+    transform-origin: left;
+}
+@keyframes sekund{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@media(max-width:530px){
+   .clock{
+    width: 360px;
+    height: 360px;
+   }
+   .soat{
+    height: 20px;
+   }
+   .minut{
+    height: 18px;
+   }
+   .sekund{
+    height: 16px;
+   }
+   .div1{
+    padding: 6px;
+    font-size: 25px;
+   }
+   .clock::after{
+    width: 23px;
+    height: 23px;
+   }
+   .d12, .d6, .d3, .d9{
+    font-size: 30px;
+   }
+}
